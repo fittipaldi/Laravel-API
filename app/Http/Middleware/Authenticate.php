@@ -35,6 +35,7 @@ class Authenticate
      */
     public function handle(Request $request, Closure $next)
     {
+        //I JUST CREATE THIS AUTH, TO SHOW A SMALL EXAMPLE THAT CAN BE POSSIBLE TO USE< LIKE JWT OS THE TABLE WITH TOKENS ETC....
         $token = $request->bearerToken();
         $bearer_token = config('auth.bearer_token', '');
         if (!$bearer_token || ($token != $bearer_token)) {

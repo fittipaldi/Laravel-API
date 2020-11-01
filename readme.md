@@ -19,11 +19,11 @@ Please check the official laravel installation guide for server requirements bef
 
 Clone the repository
 
-    git clone 
+    git clone https://github.com/fittipaldi/Laravel-API.git
 
 Switch to the repo folder
 
-    cd 
+    cd Laravel-API
 
 Install all the dependencies using composer
 
@@ -46,3 +46,21 @@ Start the local development server
     php artisan serve
 
 You can now access the server at http://localhost:8000
+
+# API Action
+
+    Header
+        Authorization: Bearer SsHOX5O448YMBNf4
+
+    
+    GET /api/v1/contacts - List contacts params: pagination [page=1], contact name [name=Jhon], company name [company=Apple] 
+    GET /api/v1/contact/id/{id} - Contact by ID
+    POST /api/v1/contact/add - Add one contact params: [name, phone, email, company, note]
+    DELETE /api/v1/contact/delete/{id} - Delete one contact
+    PUT /api/v1/contact/edit/{id} - Edit one contact params: [name, phone, email, company, note]
+
+    GET /api/v1/companies - List companies params: pagination [page=1]
+    GET /api/v1/companies/all - List all companies and all contacts for each company
+    POST /api/v1/company/add - Add one company params: [name]
+    DELETE /api/v1/company/delete/{id} - Delete one company
+    PUT /api/v1/company/edit/{id} - Edit one company params: [name]
